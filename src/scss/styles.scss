@@ -1,0 +1,21 @@
+// Import all of Bootstrap’s CSS
+@import "bootstrap/scss/bootstrap";
+
+
+
+.d-authenticated {
+    display: none;
+}
+
+body.kc-authenticated {
+    .d-unauthenticated {
+        display: none !important;
+    }
+    .d-authenticated {
+        display: flex !important;
+    }
+
+    .bg-authenticated {
+        background-color: var(--bs-success-bg-subtle) !important;
+    }
+}

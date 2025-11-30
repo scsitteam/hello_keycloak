@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Keycloak</title>
+  <link rel="stylesheet" href="scss/styles.scss">
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body class="d-flex, flex-column h-100">
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4">Hello Keyloak</span>
+      </a>
+      <ul class="nav nav-pills d-authenticated">
+        <li class="nav-item me-2 d-none" data-ks-toggle="acr">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"  data-ks-acr="state">ACR</button>
+          <ul class="dropdown-menu" data-ks-acr="list">
+            <li><a class="dropdown-item" href="#" data-ks-acr="replace"></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger me-2" data-ks-call="logout">Logout</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-ks-call="accountManagement">Account</button>
+        </li>
+      </ul>
+      <ul class="nav nav-pills d-unauthenticated">
+        <li class="nav-item">
+          <button type="button" class="btn btn-outline-primary me-2" data-ks-call="login">Login</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-ks-call="register">Sign-up</button>
+        </li>
+      </ul>
+    </header>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="card col m-2 bg-authenticated">
+        <div class="card-body">
+          <h5 class="card-title">ID Token</h5>
+          <pre data-ks-update="idTokenParsed"></pre>
+        </div>
+      </div>
+      <div class="card col m-2 bg-authenticated">
+        <div class="card-body">
+          <h5 class="card-title">Access Token</h5>
+          <pre data-ks-update="tokenParsed"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

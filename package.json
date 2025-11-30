@@ -1,0 +1,32 @@
+{
+  "name": "hello_keycloak",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parcel serve src/index.html src/keycloak.json --public-url / --dist-dir dist",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "source": [
+    "src/index.html",
+    "src/keycloak.json"
+  ],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.1",
+    "parcel": "^2.16.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "keycloak-js": "^26.2.1"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  }
+}
