@@ -24,7 +24,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.8",
-    "keycloak-js": "^26.2.2"
+    "keycloak-js": "^26.2.4"
   },
   "@parcel/resolver-default": {
     "packageExports": true
